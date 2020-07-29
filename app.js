@@ -18,7 +18,7 @@ new Vue({
             this.monsterHealth -= damage;
             this.turns.unshift({
                 isPlayer: true,
-                text: `Player hist Monstre for ${damage}`
+                text: `Player hits Monstre for ${damage}`
             });
             if (this.checkWin()) { // for not getting (-) and not return
                 // then we must check
@@ -31,7 +31,7 @@ new Vue({
             this.monsterHealth -= damage;
             this.turns.unshift({
                 isPlayer: true,
-                text: `Player hist Monstre hard for ${damage}`
+                text: `Player hits Monstre hard for ${damage}`
             });
             if (this.checkWin()) {
                 return;
@@ -58,7 +58,7 @@ new Vue({
             this.playerHealth -= damage;
             this.turns.unshift({
                 isPlayer: false,
-                text: `Monster hist Player for ${damage}`
+                text: `Monster hits Player for ${damage}`
             });
             this.checkWin; // don't need check, cuz no code after this method
         },
